@@ -7,7 +7,7 @@ int main(){
     int sum, i;
     cout << "Enter string: ";
     cin >> str;
-    for (i = 0; str[i] != '\0'; i++)
+    for (i = 0; str[i] != '\0'; i++) //also while
         sum = sum + str[i];
     cout << "Sum of ASCII value : " << sum;
     return 0;
