@@ -12,10 +12,10 @@ for student in students:
     percentage = sum(marks) / len(marks)
     result_sheet.append((name, section, percentage))
 
-# Add 2 extra marks to last subject
-for result in result_sheet:
-    result[-1] += 2
+result_sheet_list = [list(student) for student in result_sheet]
 
-# Reprint result sheet
-for result in result_sheet:
-    print(f"Name: {result[0]}, Section: {result[1]}, Percentage: {result[2]}")
+for student in result_sheet_list:
+    del student[2]
+
+for student in result_sheet_list:
+    print(f"Name: {student[0]}, Section: {student[1]}, Percentage: {student[2]}")
